@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="cont.css">
+</head>
+<body>
+      <div class="header">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+ 
+      <nav id="menu" class="hidden">
+<ul>
+<li><a href="homepage.html">Home</a></li>
+<li><a href="image.html">Image Generation</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+  <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li> 
+</ul>
+        </nav>
+    </div>
+    
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out through any of the platforms below:</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/prantik.medhi" target="_blank" class="icon instagram">Instagram</a>
+      <a href="https://t.me/prantikmedhi0" target="_blank" class="icon telegram">Telegram</a>
+      <a href="prantikpratimmedhi@gmail.com" class="icon gmail">Gmail</a>
+      <a href="https://wa.me/+91 7636978286" target="_blank" class="icon whatsapp">WhatsApp</a>
+      
+    </div>
+  </div>
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('visible');
+  }
+</script>
+</body>
+</html>

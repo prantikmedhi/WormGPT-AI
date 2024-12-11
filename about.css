@@ -1,0 +1,150 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2f; /* Dark background */
+    color: #f5f5f5; /* Light text */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+
+/* Header */
+.header {
+    background-color: #4b4b80;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10;
+    position: absolute; /* positions relative to its normal position */
+    top: 2px; /* Moves 10px down */
+    left: 20px; /* Moves 20px to the right */
+}
+
+
+.menu-button:hover {
+    background-color: #7070b5;
+}
+
+/* Aesthetic Navigation Menu */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #4b4b80, #7070b5);
+  border-radius: 15px;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 15px;
+  width: 200px;
+  transform: translateY(-50%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 200;
+}
+
+nav.visible {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav li {
+  margin: 10px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+nav li:hover {
+  transform: translateX(10px);
+  opacity: 0.8;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Toggle Button */
+.menu-button {
+    position: fixed;
+    top: 20px; /* Adjust the distance from the top */
+    left: 20px; /* Adjust the distance from the left */
+    background: linear-gradient(135deg, #7070b5, #4B4B80);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 300;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.menu-button::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.menu-button::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    position: relative;
+    top: -6px;
+    transition: transform 0.3s;
+}
+
+.menu-button.open::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-button.open::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
